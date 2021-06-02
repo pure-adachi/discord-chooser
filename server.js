@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const client = new discord.Client();
 
 client.on("ready", () => {
-  client.user.setPresence({ game: { name: "choose!" } });
+  client.user.setPresence({ game: { name: "chooser" } });
 });
 
 client.on("message", (message) => {
