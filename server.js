@@ -22,7 +22,9 @@ client.on("message", (message) => {
   });
 
   if (voiceChannel) {
-    const members = voiceChannel.members.map((member) => member.user.username);
+    const members = voiceChannel.members.map(
+      (member) => member.nickname || member.user.username
+    );
     const length = members.length;
     const rand = Math.floor(Math.random() * length);
 
