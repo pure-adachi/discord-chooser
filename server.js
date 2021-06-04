@@ -13,7 +13,7 @@ client.on("message", (message) => {
   if (message.author.id === client.user.id) return;
 
   const channels = message.guild.channels;
-  const voiceChannel = channels.find((ch) => {
+  const voiceChannel = channels.cache.find((ch) => {
     if (ch.type !== "voice") {
       return false;
     }
